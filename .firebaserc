@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "seriestp-d8445": {
+      "hosting": {
+        "myApp": [
+          "seriestp-d8445"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "seriestp-d8445"
+  }
+}
