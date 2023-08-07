@@ -1,22 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UserService } from 'src/app/user.service';
+import { UserServiceService } from '../user-service.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
-
+export class LoginComponent {
   formLogin: FormGroup;
 
   constructor(
-    private userService: UserService,
-    private router: Router
-  ) {
-    this.formLogin = new FormGroup({
+    private userService: UserServiceService,
+    private router:Router
+    ){
+    this.formLogin= new FormGroup({
       email: new FormControl(),
       password: new FormControl()
     })
@@ -29,9 +28,18 @@ export class LoginComponent implements OnInit {
     this.userService.login(this.formLogin.value)
       .then(response => {
         console.log(response);
-        this.router.navigate(['/menu'])
+        this.router.navigate(["/main"])
       })
-      .catch(error => console.log(error));
+      .catch( error => console.log(error));
+  }
+
+  onClick() {
+    this.userService.loginWithGoogle()
+      .then(response => {
+        console.log(response);
+        this.router.navigate(['/main']);
+      })
+      .catch(error => console.log(error))
   }
 
 }

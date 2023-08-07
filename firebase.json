@@ -1,9 +1,13 @@
 {
   "hosting": [
     {
-      "target": "myApp",
+      "target": "app",
       "source": ".",
       "frameworksBackend": {}
     }
-  ]
+  ],
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  }
 }

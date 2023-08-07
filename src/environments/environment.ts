@@ -1,10 +1,10 @@
 export const environment = {
   firebase: {
-    projectId: 'seriestp-d8445',
-    appId: '1:149090557136:web:e01b10b68809a6f527d2d5',
-    storageBucket: 'seriestp-d8445.appspot.com',
-    apiKey: 'AIzaSyBF-y_DnuFDXGPH54lum6l2qb1OqsAWzd4',
-    authDomain: 'seriestp-d8445.firebaseapp.com',
-    messagingSenderId: '149090557136',
+    projectId: 'fir-auth-b36d3',
+    appId: '1:867689335841:web:f126ccd34ffd158e67a760',
+    storageBucket: 'fir-auth-b36d3.appspot.com',
+    apiKey: 'AIzaSyCJ2EpQXklMN5G3E7w9FbdDZn7xhMqYefg',
+    authDomain: 'fir-auth-b36d3.firebaseapp.com',
+    messagingSenderId: '867689335841',
   },
 };
